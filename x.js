@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 var bot = new Discord.Client();
 
-x.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);
 //const PORT = process.env.PORT || 3000;
 
 //liên kết file json
