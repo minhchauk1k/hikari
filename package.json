@@ -9,5 +9,11 @@
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minhchauk1k/hikari.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Yuki Satoh <yukisatohk1k@gmail.com>"
 }
