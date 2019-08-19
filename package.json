@@ -1,6 +1,13 @@
 {
-   "main": "x.js",
+  "name": "Hikari",
+  "description": "Test",
+  "version": "0.0.1",
+  "main": "x.js",
   "scripts": {
     "start": "node x.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
   }
 }
