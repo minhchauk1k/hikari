@@ -97,9 +97,10 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} said "Chẹp chẹp"`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://media1.tenor.com/images/cb45f9562719f5a789952cba8e2fe9b7/tenor.gif');
-            //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+           
          message.channel.send(embed);
+           //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
