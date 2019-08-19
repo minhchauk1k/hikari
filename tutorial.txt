@@ -1,0 +1,21 @@
+Hướng dẫn sử dụng Bot Hikari
+--------------------------
+.hug @someone
+.ôm @someone
+.slap @someone
+.tát @someone
+.hit @someone
+.đánh @someone
+.pat @someone
+.xoa @someone
+.lewd @someone
+Để gửi gif và Tag người đó
+-------------------------
+.sex [hỏi gì đó]
+.? [hỏi gì đó]
+Để bot quyết định giúp bạn (random nhé)
+-------------------------
+.random A B
+.rad A B 
+Để bot trả lại một số ngẫu nhiên từ A->B
+-------------------------
