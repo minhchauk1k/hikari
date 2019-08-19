@@ -1,6 +1,4 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
-
 var bot = new Discord.Client();
 
 //liên kết file json
@@ -267,4 +265,4 @@ bot.on("message", async message => {
 })	
 
 //bot đăng nhập
-bot.login(config.token);
+bot.login(process.env.bot_token);
