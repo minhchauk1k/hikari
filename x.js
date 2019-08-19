@@ -222,7 +222,7 @@ bot.on("message", async message => {
         bot.msgs[argsedit[0]] = {
           reply: argsedit[1]
         }
-        fs.writeFile("./learning.json", JSON.stringify(bot.msgs,null,4), err => {
+        fs.writeFileSync("./learning.json", JSON.stringify(bot.msgs,null,4), err => {
           if(err) throw err;
           message.channel.send(`Hikari đã nhớ rồi ạ!`);
         });
