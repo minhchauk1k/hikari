@@ -76,7 +76,7 @@ bot.on("message", async message => {
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
-         embed.setDescription(`${message.author} NANI?!!!!!!!`);
+         embed.setDescription(`${message.author} NANI?!!!!!!!` || "None");
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.makeagif.com/media/8-25-2017/8UsD0s.gif');
          message.channel.send(embed);
@@ -92,7 +92,7 @@ bot.on("message", async message => {
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
-         embed.setDescription(`${message.author} said "Chẹp chẹp"`);
+         embed.setDescription(`${message.author} said "Chẹp chẹp"` || "None");
          embed.setColor(0xFFC0CB);
          embed.setImage('https://media1.tenor.com/images/cb45f9562719f5a789952cba8e2fe9b7/tenor.gif');
            
@@ -111,7 +111,7 @@ bot.on("message", async message => {
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
-         embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!`);
+         embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!` || "None");
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
             //Xóa đoạn gọi bot
