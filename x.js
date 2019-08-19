@@ -30,15 +30,23 @@ const PREFIX = ".";
 
 
 //Tải bot
-bot.on('ready', function() {
-  setInterval(function() {
-    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-    bot.user.setActivity('YouTube', { type: 'WATCHING' })
-    .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-    .catch(console.error);// sets bot's activities to one of the phrases in the arraylist.
- }, 10000);  // Runs this every 10 seconds.
+// bot.on('ready', function() {
+//   setInterval(function() {
+//     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+//     bot.user.setActivity('YouTube', { type: 'WATCHING' })
+//     .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+//     .catch(console.error);// sets bot's activities to one of the phrases in the arraylist.
+//  }, 10000);  // Runs this every 10 seconds.
 
-  console.log("Bot Yuki is now online!");	
+//   
+// })
+
+bot.on("ready", () => {
+  setInterval(() => {
+    bot.user.setActivity(activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
+    console.log("Stt là: ",activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
+  }, 10000); // Runs this every 10 seconds.
+  console.log("Bot Hikari is now online!");	
 })
 
 //bot thông báo bạn mới
