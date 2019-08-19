@@ -31,7 +31,7 @@ bot.on('guildMemberAdd', member => {
 //Bot lúc đọc mess
 bot.on("message", async message => {
     //set trạng thái cho bot
-    bot.user.setActivity("Hủy diệt thế giới!"); 
+    //bot.user.setActivity("Hủy diệt thế giới!"); 
   
    //có ai tag thì rep lại
   if(message.isMentioned(bot.user)) message.channel.send(`Có gì không ạ? ${message.author}`);
