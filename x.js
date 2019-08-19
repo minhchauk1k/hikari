@@ -118,7 +118,7 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
-         message.channel.send(embed || "None");
+         message.channel.send({embed} || "None");
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
       }
