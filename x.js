@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 var bot = new Discord.Client();
 
+var server = http.createServer(sendSMSHandler); server.listen(PORT);
+
 //liên kết file json
 bot.msgs = require('./learning.json');
 
