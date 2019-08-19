@@ -4,8 +4,15 @@ var bot = new Discord.Client();
 //fix lỗi 60s
 var express = require('express');
 var app     = express();
-
 app.set('port', (process.env.PORT || 5000));
+
+const activities_list = [
+  "Hủy diệt thế giới!", 
+  "Trộm pha lê của kanchou~",
+  "Giải cứu thế giới~", 
+  "Xâm chiếm vũ trụ này!"
+];
+
 
 //For avoidong Heroku $PORT error
 app.get('/', function(request, response) {
@@ -24,6 +31,10 @@ const PREFIX = ".";
 
 //Tải bot
 bot.on('ready', function(){
+  setInterval(() => {
+    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+    client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+}, 10000);
   console.log("Bot Yuki is now online!");	
 })
 
@@ -41,6 +52,11 @@ bot.on("message", async message => {
   
    //có ai tag thì rep lại
   if(message.isMentioned(bot.user)) message.channel.send(`Có gì không ạ? ${message.author}`);
+
+  //check xem có phải bot spam không để dừng lại
+  if (message.author.equals(bot.user)) return;
+  //nếu tin nhắn k chứa dấu nhận dạng  thì k làm gì cả
+  if (!message.content.startsWith(PREFIX)) return;
 
   //bot reply theo json
   var yeucau = message.content.toLowerCase();
@@ -103,12 +119,6 @@ bot.on("message", async message => {
         default: return;
     }
 
-    
-  
-  //check xem có phải bot spam không để dừng lại
-  if (message.author.equals(bot.user)) return;
-  //nếu tin nhắn k chứa dấu nhận dạng  thì k làm gì cả
-  if (!message.content.startsWith(PREFIX)) return;
 
   //tạo args ~ cắt bỏ kí tự nhận dạng và tách phần sau ra làm nhiều ô chứa mỗi ô 1 chữ
   var args = message.content.substring(PREFIX.length).split(" ");
