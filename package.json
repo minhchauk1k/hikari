@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "x.js",
   "scripts": {
-    "start": "npm run build && node x.js"
+    "start": "node x.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
