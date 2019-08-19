@@ -34,6 +34,7 @@ const PREFIX = ".";
 bot.on('ready', function() {
   console.log("Bot Hikari is now online!");	
 })
+
 // bot.on('ready', function() {
 //   setInterval(function() {
 //     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
