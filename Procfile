@@ -1,1 +1,1 @@
-worker: node x.js
+worker: PORT=$PORT node x.js
