@@ -36,7 +36,7 @@ var slap=['https://i.imgur.com/QFBjeCZ.gif','https://i.imgur.com/VsHdS0z.gif','h
 
 //Tải bot
 bot.on('ready', async () =>{
-  bot.user.setActivity("Đọc gì đó nhân loại?");
+  //bot.user.setActivity("Đọc gì đó nhân loại?");
   console.log("Bot Yuki is now online!");	
 })
 
