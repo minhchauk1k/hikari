@@ -71,16 +71,14 @@ bot.on("message", async message => {
       case "nani!":
       case "nà ní":  
       try{
-      
-    
+         //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
          embed.setDescription(`${message.author} NANI?!!!!!!!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.makeagif.com/media/8-25-2017/8UsD0s.gif');
-             //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
       }catch(e){
         console.log('Error Nani!:', e.stack);
