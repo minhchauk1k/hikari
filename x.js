@@ -31,6 +31,9 @@ const PREFIX = ".";
 
 
 //Tải bot
+bot.on('ready', function() {
+  console.log("Bot Hikari is now online!");	
+})
 // bot.on('ready', function() {
 //   setInterval(function() {
 //     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
@@ -42,13 +45,13 @@ const PREFIX = ".";
 //   
 // })
 
-bot.on("ready", () => {
-  setInterval(() => {
-    bot.user.setActivity(activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
-    console.log("Stt là: ",activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
-  }, 10000); // Runs this every 10 seconds.
-  console.log("Bot Hikari is now online!");	
-})
+// bot.on("ready", () => {
+//   setInterval(() => {
+//     bot.user.setActivity(activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
+//     console.log("Stt là: ",activities_list[Math.floor(Math.random() * (activities_list.length - 1) + 1)]);
+//   }, 10000); // Runs this every 10 seconds.
+//   console.log("Bot Hikari is now online!");	
+// })
 
 //bot thông báo bạn mới
 bot.on('guildMemberAdd', member => {
