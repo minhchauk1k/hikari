@@ -48,7 +48,7 @@ bot.on("message", async message => {
 
 //     //tạo args ~ cắt bỏ tên bot và tách phần sau ra làm 2 ô chứa
 //     // var args = message.content.substring(bot.user).split(" ");
-//     switch (yeucau) {
+    switch (yeucau) {
 //       case "nani":
 //       case "nani!":
 //       case "nà ní":  
@@ -86,24 +86,22 @@ bot.on("message", async message => {
 //       }
 //         break;
 
-//       case "f":  
-//       try{
-        
-//          var mention = message.mentions.users.first();
-//          var embed = new RichEmbed();
-//          //Mention 1 người trong Embed
-//          embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!` || "None");
-//          embed.setColor(0xFFC0CB);
-//          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
-//             //Xóa đoạn gọi bot
-//          message.delete(); //nếu delay nó xóa dòng dưới
-//          message.channel.send(embed);
-         
-//       }catch(e){
-//         console.log('Error Chẹp!:', e.stack);
-//       }
-//         break;
-//     }
+      case "f":  
+      try{
+        //Xóa đoạn gọi bot
+        message.delete(); //nếu delay nó xóa dòng dưới
+        var embed = new RichEmbed();
+        embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!` || "None");
+        embed.setColor(0xFFC0CB);
+        embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
+        message.channel.send(embed);
+      }catch(e){
+        console.log('Error Chẹp!:', e.stack);
+      }
+        break;
+      
+        default: return;
+    }
 
     
   
