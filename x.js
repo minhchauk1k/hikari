@@ -1,11 +1,6 @@
 const Discord = require("discord.js");
 var bot = new Discord.Client();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
-
 //liên kết file json
 bot.msgs = require('./learning.json');
 
