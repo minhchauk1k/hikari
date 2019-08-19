@@ -1,1 +1,2 @@
-worker: npm install express && node x.js
+npm install express
+worker: node x.js
