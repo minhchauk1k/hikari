@@ -71,8 +71,7 @@ bot.on("message", async message => {
       case "nani!":
       case "nà ní":  
       try{
-         //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+      
     
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
@@ -80,6 +79,8 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} NANI?!!!!!!!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.makeagif.com/media/8-25-2017/8UsD0s.gif');
+             //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
       }catch(e){
         console.log('Error Nani!:', e.stack);
@@ -89,15 +90,17 @@ bot.on("message", async message => {
 
       case "chẹp chẹp":  
       try{
-         //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+        
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
          embed.setDescription(`${message.author} said "Chẹp chẹp"`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://media1.tenor.com/images/cb45f9562719f5a789952cba8e2fe9b7/tenor.gif');
+            //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
+         
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
       }
@@ -105,15 +108,17 @@ bot.on("message", async message => {
 
       case "f":  
       try{
-         //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+        
          var mention = message.mentions.users.first();
          var embed = new RichEmbed();
          //Mention 1 người trong Embed
          embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
+            //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
+         
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
       }
@@ -140,8 +145,7 @@ bot.on("message", async message => {
     case "hug":
     case "ôm":
       try{
-      //Xóa đoạn gọi bot
-      message.delete(); //nếu delay nó xóa dòng dưới
+     
     
       var mention = message.mentions.users.first();
       var embed = new RichEmbed();
@@ -149,7 +153,10 @@ bot.on("message", async message => {
       embed.setDescription(`${message.author} Muốn ôm bạn nè! ${mention}`);
       embed.setColor(0xFFC0CB);
       embed.setImage(hug[Math.floor(Math.random() * hug.length)]);
+               //Xóa đoạn gọi bot
+      message.delete(); //nếu delay nó xóa dòng dưới
       message.channel.send(embed);
+      
       }catch(e){
         console.log('Error Hug!:', e.stack);
       }
@@ -161,8 +168,7 @@ bot.on("message", async message => {
     case "hit":
     case "đánh":
       try{
-         //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+       
       
           var mention = message.mentions.users.first();
           var embed = new RichEmbed();
@@ -170,6 +176,8 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} Muốn tát ${mention} thật là đau! `);
          embed.setColor(0xFFC0CB);
          embed.setImage(slap[Math.floor(Math.random() * slap.length)]);
+            //Xóa đoạn gọi bot
+         message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
       }catch(e){
         console.log('Error Slap!:', e.stack);
@@ -180,8 +188,7 @@ bot.on("message", async message => {
     case "hôn":
     case "hun":
       try{
-        //Xóa đoạn gọi bot
-        message.delete(); //nếu delay nó xóa dòng dưới
+       
       
         var mention = message.mentions.users.first();
         var embed = new RichEmbed();
@@ -189,7 +196,10 @@ bot.on("message", async message => {
         embed.setDescription(`${message.author} Đè bạn ra hun nè! ${mention}`);
         embed.setColor(0xFFC0CB);
         embed.setImage(kiss[Math.floor(Math.random() * kiss.length)]);
+           //Xóa đoạn gọi bot
+        message.delete(); //nếu delay nó xóa dòng dưới
         message.channel.send(embed);
+          
       }catch(e){
         console.log('Error Kiss!:', e.stack);
       }
