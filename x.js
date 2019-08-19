@@ -87,7 +87,7 @@ bot.on("message", async message => {
          embed.setImage('https://i.makeagif.com/media/8-25-2017/8UsD0s.gif');
          message.channel.send({embed});
       }catch(e){
-        console.log('Error Nani!:', e.stack);
+        console.log('Error Nani!:', e);
       }
            
         break;
@@ -104,7 +104,7 @@ bot.on("message", async message => {
          embed.setImage('https://media1.tenor.com/images/cb45f9562719f5a789952cba8e2fe9b7/tenor.gif');
          message.channel.send({embed});
       }catch(e){
-        console.log('Error Chẹp!:', e.stack);
+        console.log('Error Chẹp!:', e);
       }
         break;
 
@@ -120,7 +120,7 @@ bot.on("message", async message => {
          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
          message.channel.send({embed} || "None");
       }catch(e){
-        console.log('Error Chẹp!:', e.stack);
+        console.log('Error Chẹp!:', e);
       }
         break;
     }
@@ -150,7 +150,7 @@ bot.on("message", async message => {
       embed.setImage(hug[Math.floor(Math.random() * hug.length)]);
       message.channel.send({embed});
       }catch(e){
-        console.log('Error Hug!:', e.stack);
+        console.log('Error Hug!:', e);
       }
        
     break;
@@ -171,7 +171,7 @@ bot.on("message", async message => {
          embed.setImage(slap[Math.floor(Math.random() * slap.length)]);
          message.channel.send({embed});
       }catch(e){
-        console.log('Error Slap!:', e.stack);
+        console.log('Error Slap!:', e);
       }
       break;
 
@@ -190,7 +190,7 @@ bot.on("message", async message => {
         embed.setImage(kiss[Math.floor(Math.random() * kiss.length)]);
         message.channel.send({embed});
       }catch(e){
-        console.log('Error Kiss!:', e.stack);
+        console.log('Error Kiss!:', e);
       }
       break;
 
@@ -207,7 +207,7 @@ bot.on("message", async message => {
             console.log('Error Help!:', err.stack);
           });
         }catch(e){
-          console.log('Error Help!:', e.stack);
+          console.log('Error Help!:', e);
         }
       break;
     
@@ -228,7 +228,7 @@ bot.on("message", async message => {
         });
 
       }catch(e){
-          console.log('Error Write Json!:', e.stack);
+          console.log('Error Write Json!:', e);
       }
       break;
 
