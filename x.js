@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const { ClientUser, RichEmbed, Attachment, Client} = require('discord.js');
 var bot = new Discord.Client();
 
 //fix lỗi 60s
