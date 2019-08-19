@@ -30,10 +30,11 @@ const PREFIX = ".";
 
 
 //Tải bot
-bot.on('ready', () => {
-  setInterval(() => {
+bot.on('ready', function() {
+  setInterval(function() {
     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-    bot.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
+    bot.user.setActivity(activities_list[index], { type: 'PLAYING' }).then(presence => console.log(`Hoạt động dược thay đổi thành: `, activities_list[index]))
+.catch(console.error); // sets bot's activities to one of the phrases in the arraylist.
  }, 10000);  // Runs this every 10 seconds.
 
   console.log("Bot Yuki is now online!");	
