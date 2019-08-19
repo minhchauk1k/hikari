@@ -169,16 +169,14 @@ bot.on("message", async message => {
     case "hit":
     case "đánh":
       try{
-       
-      
           var mention = message.mentions.users.first();
           var embed = new RichEmbed();
          //Mention 1 người trong Embed
          embed.setDescription(`${message.author} Muốn tát ${mention} thật là đau! `);
          embed.setColor(0xFFC0CB);
          embed.setImage(slap[Math.floor(Math.random() * slap.length)]);
-            //Xóa đoạn gọi bot
-         message.delete(); //nếu delay nó xóa dòng dưới
+//             //Xóa đoạn gọi bot
+//          message.delete(); //nếu delay nó xóa dòng dưới
          message.channel.send(embed);
       }catch(e){
         console.log('Error Slap!:', e.stack);
