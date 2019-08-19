@@ -56,7 +56,7 @@ bot.on("message", async message => {
 
     //tạo args ~ cắt bỏ tên bot và tách phần sau ra làm 2 ô chứa
     // var args = message.content.substring(bot.user).split(" ");
-    switch (message.content.toLowerCase()) {
+    switch (yeucau) {
       case "yuki ơi":
       case "yuki đâu rồi?":
       case "yuki":
