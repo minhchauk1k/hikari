@@ -1,5 +1,13 @@
 Hướng dẫn sử dụng Bot Hikari
 --------------------------
+.set Câu_A -> Câu_B
+Để set trả lời tự động!
+
+ví dụ: .set hi -> xin chào
+
+tôi: hi
+Hikari: xin chào
+--------------------------
 .hug @someone
 .ôm @someone
 .slap @someone
@@ -18,4 +26,10 @@ Hướng dẫn sử dụng Bot Hikari
 .random A B
 .rad A B 
 Để bot trả lại một số ngẫu nhiên từ A->B
+-------------------------
+Một vài từ khóa nhanh
+erza -> tag anh erza
+mâu -> tag mâu
+chẹp chẹp -> gif chẹp chẹp
+f -> gif pay respect anime
 -------------------------

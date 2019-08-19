@@ -142,7 +142,6 @@ bot.on("message", async message => {
       try{
       //Xóa đoạn gọi bot
       message.delete(); //nếu delay nó xóa dòng dưới
-    
       var mention = message.mentions.users.first();
       var embed = new RichEmbed();
       //Mention 1 người trong Embed
@@ -197,8 +196,7 @@ bot.on("message", async message => {
 
     case "help":
       //Xóa đoạn gọi bot
-      message.delete();
-    
+      //message.delete();
         //đọc file tutorial.txt
         var fs = require('fs');
         try{
