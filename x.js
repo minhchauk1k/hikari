@@ -85,7 +85,7 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} NANI?!!!!!!!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.makeagif.com/media/8-25-2017/8UsD0s.gif');
-         message.channel.send(embed);
+         message.channel.send({embed});
       }catch(e){
         console.log('Error Nani!:', e.stack);
       }
@@ -102,7 +102,7 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} said "Chẹp chẹp"`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://media1.tenor.com/images/cb45f9562719f5a789952cba8e2fe9b7/tenor.gif');
-         message.channel.send(embed);
+         message.channel.send({embed});
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
       }
@@ -149,7 +149,7 @@ bot.on("message", async message => {
       embed.setDescription(`${message.author} Muốn ôm bạn nè! ${mention}`);
       embed.setColor(0xFFC0CB);
       embed.setImage(hug[Math.floor(Math.random() * hug.length)]);
-      message.channel.send(embed);
+      message.channel.send({embed});
       }catch(e){
         console.log('Error Hug!:', e.stack);
       }
@@ -170,7 +170,7 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} Muốn tát ${mention} thật là đau! `);
          embed.setColor(0xFFC0CB);
          embed.setImage(slap[Math.floor(Math.random() * slap.length)]);
-         message.channel.send(embed);
+         message.channel.send({embed});
       }catch(e){
         console.log('Error Slap!:', e.stack);
       }
@@ -189,7 +189,7 @@ bot.on("message", async message => {
         embed.setDescription(`${message.author} Đè bạn ra hun nè! ${mention}`);
         embed.setColor(0xFFC0CB);
         embed.setImage(kiss[Math.floor(Math.random() * kiss.length)]);
-        message.channel.send(embed);
+        message.channel.send({embed});
       }catch(e){
         console.log('Error Kiss!:', e.stack);
       }
@@ -205,7 +205,7 @@ bot.on("message", async message => {
           fs.readFile('./tutorial.txt', 'utf-8', function (err, data) {
             var embed = new RichEmbed();
             embed.setDescription(data);
-            message.channel.send(embed);
+            message.channel.send({embed});
             console.log('Error Help!:', err.stack);
           });
         }catch(e){
