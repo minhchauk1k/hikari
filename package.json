@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "main": "x.js",
   "scripts": {
-    "start": "npm install express && node x.js"
+    "start": "npm  npm install --save express && node x.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
