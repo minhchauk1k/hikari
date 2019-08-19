@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "main": "x.js",
   "scripts": {
-    "start": "git:clone -a hikari-chan-bot npm install --save express && node x.js"
+    "start": "npm install --save express && node x.js"
   },
   "dependencies": {
     "discord.js": "11.1.0",
