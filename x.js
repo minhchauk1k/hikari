@@ -33,8 +33,9 @@ const PREFIX = ".";
 bot.on('ready', function(){
   setInterval(() => {
     const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-    bot.user.user.setActivity(activities_list[index], { type: 'WATCHING' }); // sets bot's activities to one of the phrases in the arraylist.
-}, 10000);  // Runs this every 10 seconds.
+//     bot.user.user.setActivity(activities_list[index], { type: 'WATCHING' }); // sets bot's activities to one of the phrases in the arraylist.
+// }, 10000);  // Runs this every 10 seconds.
+  bot.user.usersetGame(activities_list[index])},10000);
   console.log("Bot Yuki is now online!");	
 })
 
