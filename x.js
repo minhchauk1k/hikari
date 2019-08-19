@@ -15,7 +15,7 @@ app.get('/', function(request, response) {
   var result = 'App is running'
   response.send(result);
 }).listen(app.get('port'), function() {
-  console.log('Server đang dùng port: ', app.get('port'));
+  console.log('Server đang dùng port:', app.get('port'));
 });
 
 const PREFIX = ".";
@@ -35,7 +35,8 @@ var slap=['https://i.imgur.com/QFBjeCZ.gif','https://i.imgur.com/VsHdS0z.gif','h
 
 
 //Tải bot
-bot.on('ready', function(){
+bot.on('ready', async () =>{
+  bot.user.setActivity("Đọc gì đó nhân loại?");
   console.log("Bot Yuki is now online!");	
 })
 
@@ -56,7 +57,7 @@ bot.on("message", async message => {
 
   //bot reply theo json
   var yeucau = message.content.toLowerCase();
-  if(bot.msgs[yeucau]!=null) message.channel.send(bot.msgs[yeucau].reply);
+  if(bot.msgs[yeucau]!=null) message.channel.send(bot.msgs[yeucau].reply || "Lỗi: tin nhắn rỗng!");
 
     //tạo args ~ cắt bỏ tên bot và tách phần sau ra làm 2 ô chứa
     // var args = message.content.substring(bot.user).split(" ");
@@ -117,7 +118,7 @@ bot.on("message", async message => {
          embed.setDescription(`${message.author} đã ấn "F" để thể hiện sự tiếc thương đến bạn!`);
          embed.setColor(0xFFC0CB);
          embed.setImage('https://i.pinimg.com/originals/38/d2/14/38d214c232f7cc550d15bb915a3af406.gif');
-         message.channel.send(embed);
+         message.channel.send(embed || "None");
       }catch(e){
         console.log('Error Chẹp!:', e.stack);
       }
@@ -135,11 +136,6 @@ bot.on("message", async message => {
   var args = message.content.substring(PREFIX.length).split(" ");
   //trường hợp dấu nhận dạng + câu lệnh ví dụ .ping .hug
   switch (args[0].toLowerCase()) {
-
-    //giống hello world
-    case "ping":
-        message.channel.send("pong!");
-    break;
 
     case "hug":
     case "ôm":
@@ -269,10 +265,6 @@ bot.on("message", async message => {
       }else{
         message.channel.send("Không hiểu muốn hỏi gì!");
     }
-    break;
-
-    case "ping":
-        message.channel.send("pong!");
     break;
 
     // //kèm tài liệu
